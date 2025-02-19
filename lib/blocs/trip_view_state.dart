@@ -10,13 +10,13 @@ class TripViewState extends Equatable {
   final bool isLoading;
   final bool hasError;
   final List<Quote> quotes;
-  final Trip? trip;
+  final Trip? selectedTrip;
 
   const TripViewState({
     this.isLoading = true,
     this.hasError = false,
     this.quotes = const [],
-    this.trip,
+    this.selectedTrip,
   });
 
   @override
@@ -24,7 +24,7 @@ class TripViewState extends Equatable {
     isLoading,
     hasError,
     quotes,
-    trip,
+    selectedTrip,
   ];
 
   @override

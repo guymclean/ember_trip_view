@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   Locator.registerDependencies();
-  
+
   runApp(const MyApp());
 }
 

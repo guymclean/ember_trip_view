@@ -28,11 +28,11 @@ class TripViewCubit extends Cubit<TripViewState> {
     }
   }
 
-  Future<void> loadTripDetails(String tripUid) async {
+  Future<void> selectTrip(String tripUid) async {
     try {
       emit(state.copyWith(isLoading: true));
       final trip = await _tripRepository.fetchTripInfo(tripUid);
-      emit(state.copyWith(trip: trip, hasError: false));
+      emit(state.copyWith(selectedTrip: trip, hasError: false));
     } catch (_) {
       emit(state.copyWith(hasError: true));
     } finally {

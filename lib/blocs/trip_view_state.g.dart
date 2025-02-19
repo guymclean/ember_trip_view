@@ -13,7 +13,7 @@ abstract class _$TripViewStateCWProxy {
 
   TripViewState quotes(List<Quote> quotes);
 
-  TripViewState trip(Trip? trip);
+  TripViewState selectedTrip(Trip? selectedTrip);
 
   /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TripViewState(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
   ///
@@ -25,7 +25,7 @@ abstract class _$TripViewStateCWProxy {
     bool isLoading,
     bool hasError,
     List<Quote> quotes,
-    Trip? trip,
+    Trip? selectedTrip,
   });
 }
 
@@ -45,7 +45,8 @@ class _$TripViewStateCWProxyImpl implements _$TripViewStateCWProxy {
   TripViewState quotes(List<Quote> quotes) => this(quotes: quotes);
 
   @override
-  TripViewState trip(Trip? trip) => this(trip: trip);
+  TripViewState selectedTrip(Trip? selectedTrip) =>
+      this(selectedTrip: selectedTrip);
 
   @override
   /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TripViewState(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
@@ -58,7 +59,7 @@ class _$TripViewStateCWProxyImpl implements _$TripViewStateCWProxy {
     Object? isLoading = const $CopyWithPlaceholder(),
     Object? hasError = const $CopyWithPlaceholder(),
     Object? quotes = const $CopyWithPlaceholder(),
-    Object? trip = const $CopyWithPlaceholder(),
+    Object? selectedTrip = const $CopyWithPlaceholder(),
   }) {
     return TripViewState(
       isLoading:
@@ -76,11 +77,11 @@ class _$TripViewStateCWProxyImpl implements _$TripViewStateCWProxy {
               ? _value.quotes
               // ignore: cast_nullable_to_non_nullable
               : quotes as List<Quote>,
-      trip:
-          trip == const $CopyWithPlaceholder()
-              ? _value.trip
+      selectedTrip:
+          selectedTrip == const $CopyWithPlaceholder()
+              ? _value.selectedTrip
               // ignore: cast_nullable_to_non_nullable
-              : trip as Trip?,
+              : selectedTrip as Trip?,
     );
   }
 }
