@@ -1,4 +1,4 @@
-import 'package:ember_trip_view/models.dart/stop.dart';
+import 'package:ember_trip_view/models/stop.dart';
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -6,7 +6,7 @@ part 'trip.g.dart';
 
 @JsonSerializable()
 class Trip extends Equatable {
-  final List<Stop> route;
+  final List<Stop>? route;
 
   const Trip({
     required this.route,

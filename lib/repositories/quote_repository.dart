@@ -1,11 +1,11 @@
 import 'dart:convert';
 
-import 'package:ember_trip_view/models.dart/quote.dart';
-import 'package:ember_trip_view/models.dart/quotes_response.dart';
+import 'package:ember_trip_view/models/quote.dart';
+import 'package:ember_trip_view/models/quotes_response.dart';
 import 'package:http/http.dart' as http;
 
 class QuoteRepository {
-  Future<List<Quote>> getQuotes() async {
+  Future<List<Quote>> fetchQuotes() async {
     Uri url = Uri.https('api.ember.to', '/v1/quotes/', {
       'origin': '13',
       'destination': '42',

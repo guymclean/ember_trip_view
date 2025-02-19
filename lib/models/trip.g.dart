@@ -8,7 +8,7 @@ part of 'trip.dart';
 
 Trip _$TripFromJson(Map<String, dynamic> json) => Trip(
   route:
-      (json['route'] as List<dynamic>)
-          .map((e) => Stop.fromJson(e as Map<String, dynamic>))
+      (json['route'] as List<dynamic>?)
+          ?.map((e) => Stop.fromJson(e as Map<String, dynamic>))
           .toList(),
 );

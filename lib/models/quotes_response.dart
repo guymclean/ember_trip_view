@@ -1,4 +1,4 @@
-import 'package:ember_trip_view/models.dart/quote.dart';
+import 'package:ember_trip_view/models/quote.dart';
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 
