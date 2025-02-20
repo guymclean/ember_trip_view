@@ -1,16 +1,7 @@
-# ember_trip_view
+# Coding test for Ember
 
-A new Flutter project.
+Tested with Flutter 3.29.0 on Android
 
-## Getting Started
+This was a really fun take home challenge! I have provided a basic working solution, however unfortunately I won't have the time over the next few days to refine and improve the parts that I would have liked to (mainly concerning making the view more useful to passengers!) In total I estimate to have spent around 7 hours on this task. PLease don't be put off by the fact I didn't get in touch to ask questions or discuss my solution, it's just not the best week to fit in work in the evenings and I didn't want to waste time. I decided to use OpenStreetMap as it's what you guys are using on the web. I hope this solution demonstrates solid app development experience, is easy to understand, and can give us plenty to discuss in future.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
