@@ -38,7 +38,12 @@ class _TripViewPageState extends State<TripViewPage> {
               children: [
                 Positioned.fill(
                   child: FlutterMap(
-                    options: const MapOptions(initialCenter: codebaseCoords),
+                    options: const MapOptions(
+                      initialCenter: codebaseCoords,
+                      interactionOptions: InteractionOptions(
+                        flags: InteractiveFlag.all & ~InteractiveFlag.rotate,
+                      ), // Disable rotation
+                    ),
                     mapController: mapController,
                     children: [
                       TileLayer(
@@ -100,8 +105,20 @@ class _TripViewPageState extends State<TripViewPage> {
     return (state.selectedTrip?.route ?? [])
         .map(
           (stop) => Marker(
+            width: 50,
+            height: 60,
             point: LatLng(stop.location.lat, stop.location.lon),
-            child: Icon(Icons.place, color: Colors.greenAccent, size: 40),
+            child: Column(
+              children: [
+                Icon(Icons.place, color: Colors.greenAccent, size: 32),
+                Container(
+                  color: Colors.white,
+                  child: Text(
+                    DateFormat('HH:mm').format(stop.departure.scheduled),
+                  ),
+                ),
+              ],
+            ),
           ),
         )
         .toList();
